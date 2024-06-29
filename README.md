@@ -92,8 +92,8 @@ Where:
 
 During the evaluation, the algorithm maintains two values, alpha and beta:
 
-- **Alpha (α):** The best value that the maximizing player can guarantee at that level or above.
-- **Beta (β):** The best value that the minimizing player can guarantee at that level or above.
+- **Alpha ($\alpha$):** The best value that the maximizing player can guarantee at that level or above.
+- **Beta ($\beta$):** The best value that the minimizing player can guarantee at that level or above.
 
 The pruning occurs when:
 
