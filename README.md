@@ -77,9 +77,7 @@ The algorithm evaluates the game tree by considering all possible moves and thei
 
 For the maximizing player:
 
-```latex
-\newcommand{\minimax}{\mathrm{minimax}}
-```
+$$\newcommand{\minimax}{\mathrm{minimax}} $$
 
 $$ V(s) = \max_{a \in A(s)} \minimax(s') $$
 
