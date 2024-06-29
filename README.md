@@ -84,9 +84,9 @@ For the minimizing player:
 $$ V(s) = \min_{a \in A(s)} \mathrm{minimax}(s') $$
 
 Where:
-- $ V(s) $ is the value of the game state $ s $.
-- $ A(s) $ is the set of possible actions in state $ s $.
-- $ s' $ is the resulting state from action $ a $.
+- $V(s)$ is the value of the game state $s$.
+- $A(s)$ is the set of possible actions in state $s$.
+- $s'$ is the resulting state from action $a$.
 
 #### Alpha-Beta Pruning
 
