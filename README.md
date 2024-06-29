@@ -77,13 +77,11 @@ The algorithm evaluates the game tree by considering all possible moves and thei
 
 For the maximizing player:
 
-$$\newcommand{\minimax}{\mathrm{minimax}} $$
-
-$$ V(s) = \max_{a \in A(s)} \minimax(s') $$
+$$ V(s) = \max_{a \in A(s)} \newcommand{\minimax}{\mathrm{minimax}} \minimax(s') $$
 
 For the minimizing player:
 
-$$ V(s) = \min_{a \in A(s)} \arminimax(s') $$
+$$ V(s) = \min_{a \in A(s)} \newcommand{\minimax}{\mathrm{minimax}} \minimax(s') $$
 
 Where:
 - $ V(s) $ is the value of the game state $ s $.
