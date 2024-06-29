@@ -77,16 +77,16 @@ The algorithm evaluates the game tree by considering all possible moves and thei
 
 For the maximizing player:
 
-\[ V(s) = \max_{a \in A(s)} \minimax(s') \]
+$$ V(s) = \max_{a \in A(s)} \minimax(s') $$
 
 For the minimizing player:
 
-\[ V(s) = \min_{a \in A(s)} \minimax(s') \]
+$$ V(s) = \min_{a \in A(s)} \minimax(s') $$
 
 Where:
-- \( V(s) \) is the value of the game state \( s \).
-- \( A(s) \) is the set of possible actions in state \( s \).
-- \( s' \) is the resulting state from action \( a \).
+- $ V(s) $ is the value of the game state $ s $.
+- $ A(s) $ is the set of possible actions in state $ s $.
+- $ s' $ is the resulting state from action $ a $.
 
 #### Alpha-Beta Pruning
 
@@ -97,7 +97,7 @@ During the evaluation, the algorithm maintains two values, alpha and beta:
 
 The pruning occurs when:
 
-\[ \beta \leq \alpha \]
+$$ \beta \leq \alpha $$
 
 This indicates that further exploration of the current node is unnecessary because it cannot affect the final decision.
 
