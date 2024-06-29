@@ -66,3 +66,67 @@ def minimax(game, depth, alpha, beta, maximizing_player):
                 break
         return min_eval
 ```
+
+
+
+### Mathematical Explanation
+
+The algorithm evaluates the game tree by considering all possible moves and their outcomes. The mathematical representation of the Minimax algorithm with Alpha-Beta pruning can be described as follows:
+
+#### Minimax Function
+
+For the maximizing player:
+
+\[ V(s) = \max_{a \in A(s)} \minimax(s') \]
+
+For the minimizing player:
+
+\[ V(s) = \min_{a \in A(s)} \minimax(s') \]
+
+Where:
+- \( V(s) \) is the value of the game state \( s \).
+- \( A(s) \) is the set of possible actions in state \( s \).
+- \( s' \) is the resulting state from action \( a \).
+
+#### Alpha-Beta Pruning
+
+During the evaluation, the algorithm maintains two values, alpha and beta:
+
+- **Alpha (α):** The best value that the maximizing player can guarantee at that level or above.
+- **Beta (β):** The best value that the minimizing player can guarantee at that level or above.
+
+The pruning occurs when:
+
+\[ \beta \leq \alpha \]
+
+This indicates that further exploration of the current node is unnecessary because it cannot affect the final decision.
+
+## Example Usage
+
+The algorithm is used to determine the best move for the AI in the `get_best_move` function:
+
+
+```python
+def get_best_move(game, difficulty):
+    if random.random() > difficulty:
+        return random.choice(game.available_moves())
+    
+    best_score = float('-inf')
+    best_move = None
+    for move in game.available_moves():
+        game.make_move(move, 'O')
+        score = minimax(game, 0, float('-inf'), float('inf'), False)
+        game.board[move] = ' '
+        game.current_winner = None
+        if score > best_score:
+            best_score = score
+            best_move = move
+    return best_move
+```
+
+
+## Conclusion
+
+The Alpha-Beta Pruning Minimax algorithm allows the AI to play optimally by evaluating the game tree efficiently. This implementation ensures that the AI makes the best possible move, providing a challenging opponent for the player.
+
+This README provides an overview of the algorithm and its implementation in the Tic-Tac-Toe game. For further details, refer to the source code and comments within the code.
