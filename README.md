@@ -124,6 +124,13 @@ def get_best_move(game, difficulty):
     return best_move
 ```
 
+## Playing The Game
+
+To play the game, make sure the pygame library has been installed in your Python environment and launch the tictactoe.py script:
+
+```
+python tictactoe.py
+```
 
 ## Conclusion
 
